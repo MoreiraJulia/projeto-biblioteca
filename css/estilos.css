@@ -1,0 +1,19 @@
+i{
+    display: block;
+    width: 48px;
+    text-align: center;
+}
+
+.biblioteca img{
+    width: 150px;
+}
+
+.quem-somos,
+.acervo{
+    background-color: #f2f2f2;
+}
+ 
+.links{
+    text-decoration: none;
+}
+
