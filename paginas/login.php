@@ -12,7 +12,7 @@
             <div class="col-md-5 text-center">
                 <div class="h-100 p-5 bg-light border rounded-3">
                     <h2>Quem está logando?</h2>
-                    <button class="btn btn-primary mt-3" type="submit"><a href="../login/usuario.php" class="link-light links">Usuário</a></button>
+                    <button class="btn btn-primary mt-3" type="submit"><a href="../usuario/usuario-login.php" class="link-light links">Usuário</a></button>
                     <button class="btn btn-primary mt-3" type="submit"><a href="../funcionario/funcionario-login.php" class="link-light links">Funcionário</a></button>
                 </div>
             </div>

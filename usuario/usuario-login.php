@@ -18,7 +18,7 @@
                         <input class="form-control" type="text" name="nome">
                     </div>
                     <div class="col-md-12 mt-3">
-                        <label class="form-label">Senha:</label>
+                        <label class="form-label">Número da carteirinha:</label>
                         <input class="form-control" type="password" name="senha">
                     </div>
                     <div class="d-flex justify-content-md-center">
