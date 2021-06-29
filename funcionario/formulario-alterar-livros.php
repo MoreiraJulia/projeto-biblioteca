@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['FuncionarioLog'])){
+        header("Location: ../paginas/login.php");
+    }
+?>
 <?php include "../includes/cabecalho.php"; 
 include "../includes/conexao.php"; 
 
@@ -23,6 +29,7 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
     $foto = $livro['foto'];
 }
 ?>
+
 
 <div class="container">
     <form name="formulario-alterar-livros" class="mt-5 row" method="post" action="livros-alterar.php">

@@ -1,8 +1,13 @@
 <?php include "../includes/cabecalho.php";?>
-
+<?php
+    session_start();
+    if(!isset($_SESSION['FuncionarioLog'])){
+        header("Location: ../paginas/login.php");
+    }
+?>
 
 <div class="container">
-    <h2 class="mt-5 py-3">Seja Bem vindo(a)</h2>
+    <h2 class="mt-5 py-3">Bem vindo</h2>
 
     <?php if(isset($_GET['mensagem'])){
         if($_GET['mensagem'] == 'cadastrado'){
@@ -35,7 +40,7 @@
                     <h3 class="mt-2">Livros reservados/ emprestados</h3>
                 </div>
             </div></a>
-            <a href="cadastro-livros.php" class="col-md-4 links"><div class="text-center">
+            <a href="formulario-cadastro-livros.php" class="col-md-4 links"><div class="text-center">
                 <div class="h-100 p-5 bg-light border rounded-3">
                     <img src="../img/livroG.png">
                     <h3 class="mt-2">Cadastramento de livros</h3>

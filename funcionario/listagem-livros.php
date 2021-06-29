@@ -1,4 +1,12 @@
 <?php include "../includes/cabecalho.php"; ?>
+
+<?php
+    session_start();
+    if(!isset($_SESSION['FuncionarioLog'])){
+        header("Location: ../paginas/login.php");
+    }
+?>
+
 <?php 
 include "../includes/conexao.php";
 
@@ -53,27 +61,9 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
                         echo "<td>{$row_livro['isbn']}</td>";
                         echo "<td>{$row_livro['serie']}</td>";
                         echo "<td>{$row_livro['nome_autor']}</td>";
-                        echo "<td><a class='btn btn-warning' href='livros-formulario-alterar.php?id_livro={$row_livro['id']}'><i class='bi bi-pencil-square'></i></a>";
-                        echo "<a class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#exampleModal' ><i class='bi bi-x-square'></i></a></td>";
+                        echo "<td><a class='btn btn-warning' href='formulario-alterar-livros.php?id_livro={$row_livro['id']}'><i class='bi bi-pencil-square'></i></a> | ";
+                        echo "<a class='btn btn-danger' href='livros-excluir.php?id_livro={$row_livro['id']}'><i class='bi bi-x-square'></i></a></td>";
                         echo "</tr>";
-                        
-                        echo "<div class='modal fade' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
-                        echo "<div class='modal-dialog'>";
-                        echo "<div class='modal-content'>";
-                        echo "<div class='modal-header'>";
-                        echo "<h5 class='modal-title' id='exampleModalLabel'>Excluir Cadastro</h5>";
-                        echo "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>";
-                        echo "</div>";
-                        echo "<div class='modal-body'>";
-                        echo "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sunt corrupti reiciendis perferendis harum, debitis, a, enim natus repudiandae non quas! Voluptatum corrupti rem vel.";
-                        echo "</div>";
-                        echo "<div class='modal-footer'>";
-                        echo "<button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>";
-                        echo "<a class='btn btn-primary' href='livros-excluir.php?id_livro={$row_livro['id']}'>Save changes</a>";
-                        echo "</div>";
-                        echo "</div>";
-                        echo "</div>";
-                        echo "</div>";
 
                     }
                 }

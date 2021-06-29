@@ -1,4 +1,12 @@
 <?php include "../includes/cabecalho.php"; ?>
+
+<?php
+    session_start();
+    if(!isset($_SESSION['FuncionarioLog'])){
+        header("Location: ../paginas/login.php");
+    }
+?>
+
 <?php 
 include "../includes/conexao.php";
 
