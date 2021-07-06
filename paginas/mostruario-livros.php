@@ -8,7 +8,7 @@ $sqlBuscar = "SELECT * FROM tb_livros WHERE id={$id_livro}";
 
 $listaDeLivros = mysqli_query($conexao, $sqlBuscar);
 
-$id = $isbn = $nome_livro = $genero = $serie = $classificacao = $editora = $edicao = $nome_autor = $endereco_biblioteca = $foto = "";
+$id = $isbn = $nome_livro = $genero = $serie = $classificacao = $editora = $edicao = $nome_autor = $endereco_biblioteca = $foto = $sinopse = "";
 
 while($livro = mysqli_fetch_assoc($listaDeLivros)){
     $id = $livro['id'];
@@ -22,20 +22,20 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
     $nome_autor = $livro['nome_autor'];
     $endereco_biblioteca = $livro['endereco_biblioteca'];
     $foto = $livro['foto'];
+    $sinopse = $livro['sinopse'];
 }
 ?>
 
 <div class="container">
-    <h2 class="mt-5">Apagar cadastro de livro</h2>
+    <h2 class="mt-5"><?php echo $nome_livro;?></h2>
     <div >
     <input name="id_livro" type="hidden" value="<?php echo $id_livro;?>">
     <div class="row mt-5">
         <div class="col-3">
-            <img src="<?php echo $foto;?>">
+            <img src="../funcionario/<?php echo $foto;?>">
         </div>
-        <div class="col-7">
-            <h4><?php echo $nome_livro;?></h4>
-            <p>
+        <div class="col-4 fs-5">
+            </p>
                 ISBN: <?php echo $isbn;?><br>
                 Gênero: <?php echo $genero;?><br>
                 Série: <?php echo $serie;?><br>
@@ -47,10 +47,9 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
             </p>
         </div>
     </div>
-    <h3>Tem certeza que deseja excluiro cadastro do livro <?php echo $nome_livro;?>?</h3>
-    <?php
-  
-    ?> 
+    <h3 class="mt-5">Sinopse de <?php echo $nome_livro;?></h3>
+        <p class="fs-5"><?php echo $sinopse; ?>
+        </p>
     </div>
 </div>
 

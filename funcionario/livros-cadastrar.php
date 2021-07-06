@@ -16,9 +16,11 @@ $dir = "images/";
 $arquivo = $_FILES['arquivo'];
 $foto = $dir . $arquivo['name'];
 
+$sinopse = $_POST['sinopse'];
+
 move_uploaded_file($arquivo['tmp_name'] , "$dir/" . $arquivo['name']);
 
-$sqlInserir = "INSERT INTO tb_livros(isbn, nome_livro, genero, serie, classificacao, editora, edicao, nome_autor, endereco_biblioteca, disponibilidade, foto)
+$sqlInserir = "INSERT INTO tb_livros(isbn, nome_livro, genero, serie, classificacao, editora, edicao, nome_autor, endereco_biblioteca, disponibilidade, foto, sinopse)
                 values(
                 '{$isbn}', 
                 '{$nome_livro}',
@@ -30,7 +32,8 @@ $sqlInserir = "INSERT INTO tb_livros(isbn, nome_livro, genero, serie, classifica
                 '{$nome_autor}',
                 '{$endereco_biblioteca}',
                 '{$disponibilidade}',
-                '{$foto}'
+                '{$foto}',
+                '{$sinopse}'
             );";
 
 $resultado = mysqli_query($conexao , $sqlInserir);

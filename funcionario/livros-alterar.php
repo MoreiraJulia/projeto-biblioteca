@@ -14,6 +14,8 @@ $disponibilidade = "";
 if(isset($_POST['disponibilidade'])){
     $disponibilidade = $_POST['disponibilidade'];
 }
+$foto = $_POST['foto'];
+$sinopse = $_POST['sinopse'];
 
 $sqlAlterar = "UPDATE tb_livros set
                 isbn = '{$isbn}',
@@ -25,7 +27,9 @@ $sqlAlterar = "UPDATE tb_livros set
                 edicao = '{$edicao}',
                 nome_autor = '{$nome_autor}',
                 endereco_biblioteca = '{$endereco_biblioteca}',
-                disponibilidade = '{$disponibilidade}'
+                disponibilidade = '{$disponibilidade}',
+                foto = '{$foto}',
+                sinopse = '{$sinopse}'
                 WHERE id = {$id_livro}";
 
 $resultado = mysqli_query($conexao, $sqlAlterar);

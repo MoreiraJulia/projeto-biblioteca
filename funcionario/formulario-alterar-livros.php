@@ -1,9 +1,9 @@
-<?php
-    session_start();
-    if(!isset($_SESSION['FuncionarioLog'])){
-        header("Location: ../paginas/login.php");
-    }
-?>
+<!-- <?php
+    // session_start();
+    // if(!isset($_SESSION['FuncionarioLog'])){
+    //     header("Location: ../paginas/login.php");
+    // }
+?> -->
 <?php include "../includes/cabecalho.php"; 
 include "../includes/conexao.php"; 
 
@@ -14,7 +14,7 @@ $sqlBuscar = "SELECT * FROM tb_livros WHERE id={$id_livro}";
 
 $listaDeLivros = mysqli_query($conexao, $sqlBuscar);
 
-$isbn = $nome_livro = $genero = $serie = $classificacao = $editora = $edicao = $nome_autor = $endereco_biblioteca = $disponibilidade = $foto = "";
+$isbn = $nome_livro = $genero = $serie = $classificacao = $editora = $edicao = $nome_autor = $endereco_biblioteca = $disponibilidade = $foto = $sinopse = "";
 
 while($livro = mysqli_fetch_assoc($listaDeLivros)){
     $isbn = $livro['isbn'];
@@ -27,6 +27,7 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
     $nome_autor = $livro['nome_autor'];
     $endereco_biblioteca = $livro['endereco_biblioteca'];
     $foto = $livro['foto'];
+    $sinopse = $livro['sinopse'];
 }
 ?>
 
@@ -90,6 +91,10 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
                 </label>
             </div>
         </div>
+        <p class="col-12">
+            <label class="form-label">Sinopse</label>
+            <textarea class="form-control" name="sinopse" value="<?php echo $sinopse;?>"></textarea>
+        </p>
    
         <div class="d-md-flex justify-content-md-center mt-4">
             <button type="submit" class="btn btn-primary">Salvar</button>

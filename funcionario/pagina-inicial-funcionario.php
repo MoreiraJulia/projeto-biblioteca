@@ -1,10 +1,10 @@
 <?php include "../includes/cabecalho.php";?>
-<?php
-    session_start();
-    if(!isset($_SESSION['FuncionarioLog'])){
-        header("Location: ../paginas/login.php");
-    }
-?>
+<!-- <?php
+    // session_start();
+    // if(!isset($_SESSION['FuncionarioLog'])){
+    //     header("Location: ../paginas/login.php");
+    // }
+?> -->
 
 <div class="container">
     <h2 class="mt-5 py-3">Bem vindo</h2>
@@ -28,7 +28,7 @@
     ?>
 
         <div class="row mt-5 d-flex justify-content-evenly">
-            <a href="#" class="col-md-4 links"><div class="text-center">
+            <a href="informacoes-usuario.php" class="col-md-4 links"><div class="text-center">
                 <div class="h-100 p-5 bg-light border rounded-3">
                     <img src="../img/peopleG.png">
                     <h3 class="mt-2">Informações dos usuários</h3>
