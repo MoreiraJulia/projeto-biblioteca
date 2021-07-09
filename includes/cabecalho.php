@@ -1,3 +1,6 @@
+<?php 
+session_start();?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -29,6 +32,7 @@
                         <a class="nav-link" href="../paginas/quemsomos.php">QUEM SOMOS</a>
                         <a class="nav-link" href="../paginas/acervo.php">ACERVO</a>
                         <a class="nav-link" href="../paginas/login.php">LOGIN</a>
+                        <a href="#"><?php echo $_SESSION['NomeUsuario']; ?></a>
                     </div>
                 </div>
                 

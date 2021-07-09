@@ -11,7 +11,7 @@
     <h1 class="mt-5 py-5">Cadastro de livros</h1>
 
     <form name="cadastro-livros" method="post" action="livros-cadastrar.php" class="row mt-3" enctype="multipart/form-data">
-    <p class="col-4">
+        <p class="col-4">
             <label class="form-label" for="validationDefault01">ISBN-13:</label>
             <input name="isbn" class="form-control" min="14" maxlength="14" id="validationDefault01" required>
         </p>
@@ -54,7 +54,7 @@
         </p> 
         <div class="col-6 mt-4">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" name="disponibilidade" required>
+                <input class="form-check-input" type="checkbox" value="Disponível" name="disponibilidade" required>
                 <label class="form-check-label" for="validationDefault11">
                     Disponível
                 </label>

@@ -4,7 +4,7 @@ include_once 'conexao.php';
 
 $livro = filter_input(INPUT_POST, 'palavra', FILTER_SANITIZE_STRING);
 
-$result_user = "SELECT * FROM tb_livros WHERE nome_livro LIKE '%$livro%' LIMIT 20";
+$result_user = "SELECT tb_livros.*, tb_agendar.status FROM tb_livros LEFT JOIN tb_agendar ON tb_livros.id = tb_agendar.id_livro WHERE nome_livro LIKE '%$livro%' LIMIT 20";
 $resultado_user = mysqli_query($conexao, $result_user);
 
 if(($resultado_user) AND ($resultado_user->num_rows != 0)){
@@ -19,6 +19,7 @@ if(($resultado_user) AND ($resultado_user->num_rows != 0)){
         echo "{$row_user['genero']}<br>";
         echo "{$row_user['nome_autor']}<br>";
         echo "{$row_user['endereco_biblioteca']}</p>";
+        echo "{$row_user['status']}</p>";
         echo "</div>";
     }
 }else{

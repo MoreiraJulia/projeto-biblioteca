@@ -9,8 +9,13 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
 ?>
 
 <div class="container">
-    <h2 class="mt-5">Listagem de usuários cadastrados</h2>
-
+    <div class="row mt-5">
+        <h2 class="col-10">Listagem de usuários cadastrados</h2>
+        <div class="col-2">
+            <a type="submit" class="btn btn-primary" href="formulario-cadastro-usuario.php">Novo Usuário</a>
+        </div>
+    </div>
+    <!-- <h3 class="mt-3">Listagem de Usuários</h3> -->
     <div class="row g-0 position-relative mt-2 justify-content-center mb-3">
         <form method="POST" id="form-pesquisa" action="" class="d-flex col-10 mt-4">
             <input class="form-control me-2" type="text" placeholder="Digite aqui" name="nomeUsuario" id="listagem">

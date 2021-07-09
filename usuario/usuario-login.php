@@ -1,3 +1,5 @@
+
+
 <?php include "../includes/cabecalho.php"; ?>
 
 <div class="container">
@@ -11,15 +13,15 @@
             </div>
             <div class="col-md-5">
                 <div class="h-100 p-5 bg-light border rounded-3">
-                <h2 class="text-center">Login Funcionário</h2>
-                <form class="row mt-4">
+                <h2 class="text-center">Login Usuário</h2>
+                <form class="row mt-4" method="post" action="login-usuario.php">
                     <div class="col-md-12">
                         <label class="form-label">Nome:</label>
                         <input class="form-control" type="text" name="nome">
                     </div>
                     <div class="col-md-12 mt-3">
                         <label class="form-label">Número da carteirinha:</label>
-                        <input class="form-control" type="password" name="senha">
+                        <input class="form-control" type="password" name="carteirinha">
                     </div>
                     <div class="d-flex justify-content-md-center">
                         <div class="col-3">

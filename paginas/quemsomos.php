@@ -6,7 +6,7 @@
                 <div class="col-md-7 mt-4 p-4 p-md-4 ">
                     <h2>Quem Somos</h2>
                     <p>
-                        As biblio de Santa Bárbara d'Oeste são formadas por 3 unidades, sendo elas a central(Nova
+                        As bibliotecas de Santa Bárbara d'Oeste são formadas por 3 unidades, sendo elas a central(Nova
                         Biblioteca Pública), que fica localizada no centro de SBO e outras duas(Léo Sallum e CEU das
                         Artes). A biblioteca Central foi inauguradaem 15 de junho de 1968, inicialmente localizada em um
                         prédio na Rua Santa Bárbara com apenas 2.500 livros, mais tarde foi reconstruída em outro lugar.
