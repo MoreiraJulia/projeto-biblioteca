@@ -1,18 +1,14 @@
 <?php
 session_start();
 
-// if(isset($_SESSION['FuncionarioLog'])){
-//     header("Location: pagina-inicial-funcionario.php");
-// }
+$NomeUsuario = $_POST['NomeUsuario'];
+$CarteirinhaUsuario = $_POST['CarteirinhaUsuario'];
 
-$nomeUsuario = $_POST['nome'];
-$carteirinhaUsuario = $_POST['carteirinha'];
-
-echo "{$nomeUsuario} - {$carteirinhaUsuario}";
+echo "{$NomeUsuario} - {$CarteirinhaUsuario}";
 
 include "../includes/conexao.php";
 
-$sqlBusca = "SELECT * FROM tb_usuarios WHERE nome = '{$nomeUsuario}' and id = '{$carteirinhaUsuario}'";
+$sqlBusca = "SELECT * FROM tb_usuarios WHERE nome = '{$NomeUsuario}' and id = '{$CarteirinhaUsuario}'";
 
 $resultado = mysqli_query($conexao , $sqlBusca);
 

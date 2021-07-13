@@ -1,5 +1,11 @@
 <?php include "../includes/cabecalho.php"; ?>
 
+<?php
+    if (!isset($_SESSION['NomeUsuario'])){
+        header('Location: usuario-login.php?');
+    }
+?>
+
 <div class="container">
     <h2 class="mt-5">Seja bem-vindo(a) Usuário</h2>
     <div class="row mt-5 d-flex justify-content-evenly">

@@ -17,11 +17,11 @@
                 <form class="row mt-4" method="post" action="login-usuario.php">
                     <div class="col-md-12">
                         <label class="form-label">Nome:</label>
-                        <input class="form-control" type="text" name="nome">
+                        <input class="form-control" type="text" name="NomeUsuario">
                     </div>
                     <div class="col-md-12 mt-3">
                         <label class="form-label">Número da carteirinha:</label>
-                        <input class="form-control" type="password" name="carteirinha">
+                        <input class="form-control" type="password" name="CarteirinhaUsuario">
                     </div>
                     <div class="d-flex justify-content-md-center">
                         <div class="col-3">

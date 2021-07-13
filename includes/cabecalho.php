@@ -1,6 +1,6 @@
 <?php 
-session_start();?>
-
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,11 +28,22 @@ session_start();?>
                 
                 <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navegacao-principal">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="../paginas/index.php">HOME</a>
+                        <a class="nav-link" aria-current="page" href="../paginas/index.php">HOME</a>
                         <a class="nav-link" href="../paginas/quemsomos.php">QUEM SOMOS</a>
                         <a class="nav-link" href="../paginas/acervo.php">ACERVO</a>
-                        <a class="nav-link" href="../paginas/login.php">LOGIN</a>
-                        <a href="#"><?php echo $_SESSION['NomeUsuario']; ?></a>
+                        <?php 
+                        if(isset($_SESSION['NomeUsuario'])){?>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $_SESSION['NomeUsuario'];?></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../usuario/pagina-inicial-usuario.php">Perfil</a></li>
+                                    <li><a class="dropdown-item" href="../usuario/usuario-logout.php">Sair</a></li>
+                                </ul>
+                            </div>
+                        <?php }else{ ?>
+                            <a class="nav-link" href="../paginas/login.php">LOGIN</a>
+                        <?php }?>
+                        
                     </div>
                 </div>
                 
