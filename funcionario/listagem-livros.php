@@ -1,11 +1,9 @@
-<?php include "../includes/cabecalho.php"; ?>
+<?php include "../includes/cabecalho.php"; 
 
-<!-- <?php
-    // session_start();
-    // if(!isset($_SESSION['FuncionarioLog'])){
-    //     header("Location: ../paginas/login.php");
-    // }
-?> -->
+    if (!isset($_SESSION['nomeFuncionario'])){
+        header('Location: funcionario-login.php?');
+    }
+?>
 
 <?php 
 include "../includes/conexao.php";
@@ -62,7 +60,7 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
                         echo "<td>{$row_livro['serie']}</td>";
                         echo "<td>{$row_livro['nome_autor']}</td>";
                         echo "<td><a class='btn btn-warning' href='formulario-alterar-livros.php?id_livro={$row_livro['id']}'><i class='bi bi-pencil-square'></i></a> | ";
-                        echo "<a class='btn btn-danger' href='livros-excluir.php?id_livro={$row_livro['id']}' data-confirm='Tem certeza que deseja apagar este cadastro?'><i class='bi bi-x-square'></i></a></td>";
+                        echo "<a class='btn btn-danger' href='livros-excluir.php?id_livro={$row_livro['id']}'><i class='bi bi-x-square'></i></a></td>";
                         echo "</tr>";
 
                     }

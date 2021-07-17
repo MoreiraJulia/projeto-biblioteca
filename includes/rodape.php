@@ -63,7 +63,6 @@
 
 
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="../bootstrap/js/bootstrap.min.js"></script> -->
     <script src="../js/jquery.js"></script>
     <script src="../js/funcoes.js"></script>
 </body>

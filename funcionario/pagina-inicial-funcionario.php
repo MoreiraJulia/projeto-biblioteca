@@ -1,10 +1,10 @@
 <?php include "../includes/cabecalho.php";?>
-<!-- <?php
-    // session_start();
-    // if(!isset($_SESSION['FuncionarioLog'])){
-    //     header("Location: ../paginas/login.php");
-    // }
-?> -->
+
+<?php
+    if (!isset($_SESSION['nomeFuncionario'])){
+        header('Location: funcionario-login.php?');
+    }
+?>
 
 <div class="container">
     <h2 class="mt-5 py-3">Bem vindo</h2>

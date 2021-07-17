@@ -2,9 +2,13 @@
 include "../includes/cabecalho.php"; 
 include "../includes/conexao.php";
 
+if (!isset($_SESSION['nomeFuncionario'])){
+    header('Location: funcionario-login.php?');
+}
+
 $sqlBusca = "SELECT id, nome, data_nascimento, cpf, telefone FROM tb_usuarios";
 
-$listagemDeLivros = mysqli_query($conexao , $sqlBusca);
+$listarUsuarios = mysqli_query($conexao , $sqlBusca);
 
 ?>
 
@@ -12,7 +16,7 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
     <div class="row mt-5">
         <h2 class="col-10">Listagem de usuários cadastrados</h2>
         <div class="col-2">
-            <a type="submit" class="btn btn-primary" href="formulario-cadastro-usuario.php">Novo Usuário</a>
+            <a type="submit" class="btn btn-success" href="formulario-cadastro-usuario.php">Novo Usuário</a>
         </div>
     </div>
     <!-- <h3 class="mt-3">Listagem de Usuários</h3> -->
@@ -47,7 +51,7 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
                         echo "<td>{$row_usuario['data_nascimento']}</td>";
                         echo "<td>{$row_usuario['cpf']}</td>";
                         echo "<td>{$row_usuario['telefone']}</td>";
-                        echo "<td><a class='btn btn-warning' href='funcionario-usuarios-visualizar.php?id_usuario={$row_usuario['id']}'><i class='bi bi-pencil-square'></i></a></td>";
+                        echo "<td><a class='btn btn-warning' href='usuarios-visualizar.php?id_usuario={$row_usuario['id']}'><i class='bi bi-pencil-square'></i></a></td>";
                         echo "</tr>";
 
                     }

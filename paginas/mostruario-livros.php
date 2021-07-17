@@ -29,48 +29,47 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
 
 <div class="container">
     <h2 class="mt-5"><?php echo $nome_livro;?></h2>
-    <div >
-    <input name="id_livro" type="hidden" value="<?php echo $id_livro;?>">
-    <div class="row mt-5">
-        <div class="col-3">
-            <img src="../funcionario/<?php echo $foto;?>">
-        </div>
-        <div class="col-4 fs-5">
-            </p>
-                ISBN: <?php echo $isbn;?><br>
-                Gênero: <?php echo $genero;?><br>
-                Série: <?php echo $serie;?><br>
-                Classificação: <?php echo $classificacao;?> anos<br>
-                Editora: <?php echo $editora;?><br>
-                Edição: <?php echo $edicao;?>ª<br>
-                Autor: <?php echo $nome_autor;?><br>
-                Unidade disponível: <?php echo $endereco_biblioteca;?>
-            </p>
-        </div>
-        <p><?php echo $status;?></p>
-        <?php if($status == "Emprestado"){?>
-            <button type="button">
-                Indisponível
-            </button>
-        <?php }else{?>
-            <form action="livro-agendar.php" method="post" class="row">
+    <div>
+        <input name="id_livro" type="hidden" value="<?php echo $id_livro;?>">
+        <div class="row mt-5">
+            <div class="col-3">
+                <img src="../funcionario/<?php echo $foto;?>">
+            </div>
+            <div class="col-4 fs-5">
                 <p>
-                    <input name="id_livro" type="hidden" value="<?php echo $id_livro;?>">
+                    ISBN: <?php echo $isbn;?><br>
+                    Gênero: <?php echo $genero;?><br>
+                    Série: <?php echo $serie;?><br>
+                    Classificação: <?php echo $classificacao;?> anos<br>
+                    Editora: <?php echo $editora;?><br>
+                    Edição: <?php echo $edicao;?>ª<br>
+                    Autor: <?php echo $nome_autor;?><br>
+                    Unidade disponível: <?php echo $endereco_biblioteca;?>
                 </p>
-                <p class="col-4">
-                    <label class="form-label">Data retirada</label>
-                    <input class="form-control" type="date" name="data_retirada">
-                </p>
-                
-                <button type="submit">
-                    Disponível
+            </div>
+            <p><?php echo $status;?></p>
+            <?php if($status == "Emprestado"){?>
+                <button type="button">
+                    Indisponível
                 </button>
-            </form>
-        <?php } ?>
-    </div>
-    <h3 class="mt-5">Sinopse</h3>
-        <p class="fs-5"><?php echo $sinopse; ?>
-        </p>
+            <?php }else{?>
+                <form action="livro-agendar.php" method="post" class="row">
+                    <p>
+                        <input name="id_livro" type="hidden" value="<?php echo $id_livro;?>">
+                    </p>
+                    <p class="col-4">
+                        <label class="form-label">Data retirada</label>
+                        <input class="form-control" type="date" name="data_retirada">
+                    </p>
+                    
+                    <button type="submit">
+                        Disponível
+                    </button>
+                </form>
+            <?php } ?>
+        </div>
+        <h3 class="mt-5">Sinopse</h3>
+            <p class="fs-5"><?php echo $sinopse;?></p>
     </div>
 </div>
 

@@ -37,10 +37,18 @@ session_start();
                                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $_SESSION['NomeUsuario'];?></button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="../usuario/pagina-inicial-usuario.php">Perfil</a></li>
-                                    <li><a class="dropdown-item" href="../usuario/usuario-logout.php">Sair</a></li>
+                                    <li><a class="dropdown-item" href="../includes/logout.php">Sair</a></li>
                                 </ul>
                             </div>
-                        <?php }else{ ?>
+                        <?php }else if (isset($_SESSION['nomeFuncionario'])){?>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $_SESSION['nomeFuncionario'];?></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../funcionario/pagina-inicial-funcionario.php">Perfil</a></li>
+                                    <li><a class="dropdown-item" href="../includes/logout.php">Sair</a></li>
+                                </ul>
+                            </div>
+                        <?php }else{?>
                             <a class="nav-link" href="../paginas/login.php">LOGIN</a>
                         <?php }?>
                         
