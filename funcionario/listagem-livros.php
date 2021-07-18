@@ -36,7 +36,7 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
     ?>
 
         <table class="table mt-4 text-center">
-            <tr class="table-primary">
+            <tr class="table-success">
                 <td>ID</td>
                 <td>Nome</td>
                 <td>ISNB</td>

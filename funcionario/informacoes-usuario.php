@@ -23,12 +23,12 @@ $listarUsuarios = mysqli_query($conexao , $sqlBusca);
     <div class="row g-0 position-relative mt-2 justify-content-center mb-3">
         <form method="POST" id="form-pesquisa" action="" class="d-flex col-10 mt-4">
             <input class="form-control me-2" type="text" placeholder="Digite aqui" name="nomeUsuario" id="listagem">
-            <input name="listarUsuarios" class="btn btn-outline-danger" type="submit" value="Pesquisar">
+            <input name="listarUsuarios" class="btn btn-danger" type="submit" value="Pesquisar">
         </form>
     </div>
 
         <table class="table mt-4 text-center">
-            <tr class="table-primary">
+            <tr class="table-success">
                 <td>ID</td>
                 <td>Nome</td>
                 <td>Data de nascimento</td>

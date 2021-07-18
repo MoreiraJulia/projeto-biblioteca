@@ -27,7 +27,7 @@ $listaDeLivros = mysqli_query($conexao , $sqlBusca);
         <h2>Livros reservados / emprestados</h2>
 
         <table class="table mt-4 text-center">
-            <tr class="table-primary">
+            <tr class="table-success">
                 <td>ID</td>
                 <td>Livro</td>
                 <td>Usuário</td>

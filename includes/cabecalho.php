@@ -18,7 +18,7 @@ session_start();
         <header class="container">
             <nav class="navbar navbar-light navbar-expand-lg">
                 <a href="../paginas/index.php" class="nav-brand">
-                    <img src="../img/logo5.png" id="logo">
+                    <img src="../img/logo6.png" id="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navegacao-principal" aria-controls="#navegacao-principal" aria-expanded="false"
