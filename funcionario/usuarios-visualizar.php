@@ -61,56 +61,47 @@ while($usuario = mysqli_fetch_assoc($listaUsuario)){
         </div>
     </div>
 
+    <h3 class="mt-4">Livros reservados/emprestados</h3>
+    <div class="row mt-3">
+        <div class="row col-md-12 position-relzative">
+            <?php
 
-    <?php
+            $sqlBuscarAgenda = "SELECT tb_agendar.id,
+            tb_livros.foto as 'foto',
+            tb_livros.nome_livro as 'nome_livro',
+            tb_livros.serie as 'serie',
+            tb_livros.nome_autor as 'nome_autor',
+            tb_agendar.id_usuario as 'id_usuario',
+            tb_agendar.data_retirada,
+            tb_agendar.data_devolucao,
+            tb_agendar.status
+            from tb_agendar
+            inner join tb_livros on tb_agendar.id_livro = tb_livros.id
+            inner join tb_usuarios on tb_agendar.id_usuario = tb_usuarios.id WHERE id_usuario={$id_usuario}";
 
-    $sqlBuscarAgenda = "SELECT tb_agendar.id,
-    tb_livros.foto as 'foto',
-    tb_livros.nome_livro as 'nome_livro',
-    tb_livros.serie as 'serie',
-    tb_livros.nome_autor as 'nome_autor',
-    tb_usuarios.nome as 'nome',
-    tb_agendar.data_retirada,
-    tb_agendar.data_devolucao,
-    tb_agendar.status
-    from tb_agendar
-    inner join tb_livros on tb_agendar.id_livro = tb_livros.id
-    inner join tb_usuarios on tb_agendar.id_usuario = tb_usuarios.id WHERE id_usuario={$id_usuario}";
-
-    $listaAgendaUsuario = mysqli_query($conexao, $sqlBuscarAgenda);
-
-    $id = $id_livro = $id_usuario = $data_retirada = $data_devolucao = $status = "";
-    
-        while($usuarioAgenda = mysqli_fetch_assoc($listaAgendaUsuario)){
-            $id = $usuarioAgenda['id'];
-            $foto = $usuarioAgenda['foto'];
-            $nome_livro = $usuarioAgenda['nome_livro'];
-            $serie = $usuarioAgenda['serie'];
-            $nome_autor = $usuarioAgenda['nome_autor'];
-            $data_retirada = $usuarioAgenda['data_retirada'];
-            $data_devolucao = $usuarioAgenda['data_devolucao'];
-            $status = $usuarioAgenda['status'];
-        }
-   
-    ?>
-
-    <h4 class="mt-5">Livros Emprestados</h4>
-    <div class="row mt-4 ">
-        <p class="col-2">
-            <img src="<?php echo $foto; ?>" style="width: 130px">
-        </p>
-        <p class="col-3">
-            <?php echo $nome_livro; ?><br>
-            <?php echo $serie; ?><br>
-            <?php echo $nome_autor; ?><br>
-            <?php echo $data_retirada; ?><br>
-            <?php echo $data_devolucao; ?><br>
-            <?php echo $status; ?><br>
-    </p>
+            $listaAgendaUsuario = mysqli_query($conexao, $sqlBuscarAgenda);
+        
+                while($usuarioAgenda = mysqli_fetch_assoc($listaAgendaUsuario)){
+                    echo "<p class='col-2 p-md-4'>";
+                    echo "<img src='{$usuarioAgenda['foto']}'  class='img-fluid rounded-start'>";
+                    echo "</p>";
+                    echo "<div class='col-2 p-4 ps-md-0'>";
+                    echo "<h6>{$usuarioAgenda['nome_livro']}</h6>";
+                    echo "<p>";
+                    echo "{$usuarioAgenda['serie']}<br>";
+                    echo "{$usuarioAgenda['nome_autor']}<br>";
+                    echo "{$usuarioAgenda['data_retirada']}<br>";
+                    echo "{$usuarioAgenda['data_devolucao']}<br>";
+                    if($usuarioAgenda['status'] =='Reservado'){
+                        echo "<button type='button' class='btn btn-warning mt-2'>Reservado</button>";
+                    }else{
+                        echo "<button type='button' class='btn btn-danger mt-2'>Emprestado</button>";
+                    } 
+                    echo "</p>";
+                    echo "</div>";
+                }
+            ?>
+        </div>
     </div>
-   
-
-
-
 </div>
 <?php include "../includes/rodape.php"; ?>

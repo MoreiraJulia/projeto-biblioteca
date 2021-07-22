@@ -20,7 +20,7 @@
                 
                
                     <div class="row mt-3">
-                        <div class="row col-md-12 position-relative resposta">
+                        <div class="row col-md-12 position-relzative resposta">
                           
                         </div> 
                     </div>

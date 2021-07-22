@@ -44,29 +44,32 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
                     Editora: <?php echo $editora;?><br>
                     Edição: <?php echo $edicao;?>ª<br>
                     Autor: <?php echo $nome_autor;?><br>
-                    Unidade disponível: <?php echo $endereco_biblioteca;?>
+                    Unidade disponível: <?php echo $endereco_biblioteca;?><br>
+                    <br>
+                    <?php if($status == "Reservado"){?>
+                        <button type="button" class="btn btn-danger">
+                            Indisponível
+                        </button>
+                    <?php }else{?>
+                        <button type="button" class="btn btn-success">Disponível</button>
+                        <form action="livro-agendar.php" method="post" class="row">
+                            <p>
+                                <input name="id_livro" type="hidden" value="<?php echo $id_livro;?>">
+                            </p>
+                            <p class="col-4">
+                                <label class="form-label">Data retirada</label>
+                                <input class="form-control" type="date" name="data_retirada">
+                            </p>
+                            
+                            <button type="submit" class="btn btn-success">
+                                Reservar
+                            </button>
+                        </form>
+                    <?php } ?>
                 </p>
             </div>
-            <p><?php echo $status;?></p>
-            <?php if($status == "Emprestado"){?>
-                <button type="button">
-                    Indisponível
-                </button>
-            <?php }else{?>
-                <form action="livro-agendar.php" method="post" class="row">
-                    <p>
-                        <input name="id_livro" type="hidden" value="<?php echo $id_livro;?>">
-                    </p>
-                    <p class="col-4">
-                        <label class="form-label">Data retirada</label>
-                        <input class="form-control" type="date" name="data_retirada">
-                    </p>
-                    
-                    <button type="submit">
-                        Disponível
-                    </button>
-                </form>
-            <?php } ?>
+
+            
         </div>
         <h3 class="mt-5">Sinopse</h3>
             <p class="fs-5"><?php echo $sinopse;?></p>
