@@ -82,14 +82,14 @@
             </div>
             <div class="row justify-content-center">
                 <div class="accordion col-7 mt-4 " id="accordionExample">
-                    <div class="accordion-item ">
+                    <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 Accordion Item #1
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut pariatur assumenda

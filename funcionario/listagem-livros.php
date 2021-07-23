@@ -36,13 +36,13 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
     ?>
 
         <table class="table mt-4 text-center">
-            <tr class="table-success">
-                <td>ID</td>
-                <td>Nome</td>
-                <td>ISNB</td>
-                <td>Série</td>
-                <td>Autor</td>
-                <td>Ações</td>
+            <tr class="row table-success">
+                <td class="col-2">ID</td>
+                <td class="col-2">Nome</td>
+                <td class="col-2">ISNB</td>
+                <td class="col-2">Série</td>
+                <td class="col-2">Autor</td>
+                <td class="col-2">Ações</td>
             </tr>
 
             <?php
@@ -53,19 +53,17 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
                     $resultado_livro = mysqli_query($conexao, $result_livro);
                     while($row_livro = mysqli_fetch_assoc($resultado_livro)){
                         // echo "ID: " . $row_livro['nome_livro'] . "<br>";
-                        echo "<tr>";
-                        echo "<td>{$row_livro['id']}</td>";
-                        echo "<td>{$row_livro['nome_livro']}</td>";
-                        echo "<td>{$row_livro['isbn']}</td>";
-                        echo "<td>{$row_livro['serie']}</td>";
-                        echo "<td>{$row_livro['nome_autor']}</td>";
-                        echo "<td><a class='btn btn-warning' href='formulario-alterar-livros.php?id_livro={$row_livro['id']}'><i class='bi bi-pencil-square'></i></a> | ";
+                        echo "<tr class='row'>";
+                        echo "<td class='col-2'>{$row_livro['id']}</td>";
+                        echo "<td class='col-2'>{$row_livro['nome_livro']}</td>";
+                        echo "<td class='col-2'>{$row_livro['isbn']}</td>";
+                        echo "<td class='col-2'>{$row_livro['serie']}</td>";
+                        echo "<td class='col-2'>{$row_livro['nome_autor']}</td>";
+                        echo "<td class='col-2'><a class='btn btn-warning' href='formulario-alterar-livros.php?id_livro={$row_livro['id']}'><i class='bi bi-pencil-square'></i></a> | ";
                         echo "<a class='btn btn-danger' href='livros-excluir.php?id_livro={$row_livro['id']}'><i class='bi bi-x-square'></i></a></td>";
                         echo "</tr>";
-
                     }
                 }
-        
         ?>
     
         </table>

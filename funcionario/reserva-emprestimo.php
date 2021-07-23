@@ -85,8 +85,13 @@ $listaDeLivros = mysqli_query($conexao , $sqlBuscar);
                 echo "<td>{$agenda['id']}</td>";
                 echo "<td>{$agenda['nome_livro']}</td>";
                 echo "<td>{$agenda['nome']}</td>";
-                echo "<td>{$agenda['data_retirada']}</td>";
-                echo "<td>{$agenda['data_devolucao']}</td>";
+
+                $dataRetirada = date('d-m-Y', strtotime($agenda['data_retirada']));
+                echo "<td>{$dataRetirada}</td>";
+
+                $dataDevolucao = date('d-m-Y', strtotime($agenda['data_devolucao']));
+                echo "<td>{$dataDevolucao}</td>";
+
                 echo "<td>{$agenda['status']}</td>";
                 echo "<td><a class='btn btn-danger' href='agenda-excluir.php?id={$agenda['id']}'><i class='bi bi-x-square'></i></a></td>";
                 echo "</tr>";

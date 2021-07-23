@@ -90,8 +90,13 @@ while($usuario = mysqli_fetch_assoc($listaUsuario)){
                     echo "<p>";
                     echo "{$usuarioAgenda['serie']}<br>";
                     echo "{$usuarioAgenda['nome_autor']}<br>";
-                    echo "{$usuarioAgenda['data_retirada']}<br>";
-                    echo "{$usuarioAgenda['data_devolucao']}<br>";
+
+                    $dataRetirada = date('d-m-Y', strtotime($usuarioAgenda['data_retirada']));
+                    echo "<td>{$dataRetirada}</td><br>";
+
+                    $dataDevolucao = date('d-m-Y', strtotime($usuarioAgenda['data_devolucao']));
+                    echo "<td>{$dataDevolucao}</td><br>";
+                    
                     if($usuarioAgenda['status'] =='Reservado'){
                         echo "<button type='button' class='btn btn-warning mt-2'>Reservado</button>";
                     }else{

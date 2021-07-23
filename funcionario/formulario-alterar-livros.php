@@ -1,9 +1,12 @@
-<?php
+<?php include "../includes/cabecalho.php"; 
+
+
     if (!isset($_SESSION['nomeFuncionario'])){
         header('Location: funcionario-login.php?');
     }
-?>
-<?php include "../includes/cabecalho.php"; 
+
+
+
 include "../includes/conexao.php"; 
 
 $id_livro = $_GET['id_livro'];
@@ -25,6 +28,7 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
     $edicao = $livro['edicao'];
     $nome_autor = $livro['nome_autor'];
     $endereco_biblioteca = $livro['endereco_biblioteca'];
+    $disponibilidade = $livro['disponibilidade'];
     $foto = $livro['foto'];
     $sinopse = $livro['sinopse'];
 }
@@ -70,7 +74,7 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
         </p>
         <p class="col-6">
             <label class="form-label">Biblioteca disponível:</label>
-            <input name="endereco_biblioteca" class="form-control"  value="<?php echo $endereco_biblioteca;?>">
+            <input name="endereco_biblioteca" class="form-control" value="<?php echo $endereco_biblioteca;?>">
         </p>
         <p class="col-6">
             <label class="form-label">Foto:</label>
@@ -84,15 +88,16 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
                 $marcado = "checked";
             }
             ?>
-                <input class="form-check-input" type="checkbox" value="" name="disponibilidade" <?php echo $marcado; ?>>
+                <input class="form-check-input" type="checkbox" value="Disponível" <?php echo $marcado;?> name="disponibilidade" >
                 <label class="form-check-label">
                     Disponível
                 </label>
             </div>
         </div>
+        
         <p class="col-12">
             <label class="form-label">Sinopse</label>
-            <textarea class="form-control" name="sinopse" value="<?php echo $sinopse;?>"></textarea>
+            <textarea class="form-control" name="sinopse" ><?php echo $sinopse;?></textarea>
         </p>
    
         <div class="d-md-flex justify-content-md-center mt-4">
