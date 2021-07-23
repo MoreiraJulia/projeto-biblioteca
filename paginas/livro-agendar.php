@@ -10,9 +10,12 @@ $sqlInserir = "INSERT INTO tb_agendar (id_livro, id_usuario, data_retirada, data
 
 $resultado = mysqli_query($conexao , $sqlInserir);
 
-print_r($sqlInserir);
-
-exit();
+if($resultado){
+    header("location:mostruario-livros.php?id_livro='{$id_livro}'");
+}else{
+    echo "Algo deu errado.";
+}
 
 ?>
+
 

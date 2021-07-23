@@ -4,10 +4,13 @@
     if (!isset($_SESSION['nomeFuncionario'])){
         header('Location: funcionario-login.php?');
     }
+
+
+
 ?>
 
 <div class="container">
-    <h2 class="mt-5 py-3">Bem vindo</h2>
+    <h2 class="mt-5 py-3">Bem vindo <?php echo $_SESSION["nomeFuncionario"]; ?></h2>
 
     <?php if(isset($_GET['mensagem'])){
         if($_GET['mensagem'] == 'cadastrado'){

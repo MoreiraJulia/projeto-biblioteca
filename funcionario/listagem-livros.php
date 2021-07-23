@@ -61,7 +61,7 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
                         echo "<td class='col-2'>{$row_livro['nome_autor']}</td>";
                         echo "<td class='col-2'><a class='btn btn-warning' href='formulario-alterar-livros.php?id_livro={$row_livro['id']}'><i class='bi bi-pencil-square'></i></a> | ";
                         echo "<a class='btn btn-danger' href='livros-excluir.php?id_livro={$row_livro['id']}'><i class='bi bi-x-square'></i></a></td>";
-                        echo "</tr>";
+                        echo "</tr>"; 
                     }
                 }
         ?>
