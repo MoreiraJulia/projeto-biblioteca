@@ -54,9 +54,9 @@ while($usuario = mysqli_fetch_assoc($listaUsuario)){
                 </p>
             </div>
             <div class="col-3 fst-italic">
-                <a href="<?php echo $comprovante_residencia; ?>">Comprovante  de Residência</a><br>
-                <a href="<?php echo $anexo_rg; ?>">Cópia do RG</a><br>
-                <a href="<?php echo $anexo_cpf; ?>">Cópia do CPF</a>
+                <a href="<?php echo $comprovante_residencia; ?>" target="_blank">Comprovante  de Residência</a><br>
+                <a href="<?php echo $anexo_rg; ?>" target="_blank">Cópia do RG</a><br>
+                <a href="<?php echo $anexo_cpf; ?>" target="_blank">Cópia do CPF</a>
             </div>
         </div>
     </div>

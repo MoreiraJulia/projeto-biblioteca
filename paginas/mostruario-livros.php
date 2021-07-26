@@ -47,6 +47,8 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
                 <br>
                 <?php if($status == "Reservado"){?>
                     <button type="button" class="btn btn-danger">Indisponível</button>
+                <?php }else if($status == "Emprestado"){?>
+                    <button type="button" class="btn btn-danger">Indisponível</button>
                 <?php }else if(!isset($_SESSION['NomeUsuario'])){
                         echo "<button type='button' class='btn btn-success'>Disponível</button>";
                     }else{

@@ -14,8 +14,13 @@ $disponibilidade = "";
 if(isset($_POST['disponibilidade'])){
     $disponibilidade = $_POST['disponibilidade'];
 }
-$foto = $_POST['foto'];
+$dir = "images/";
+$arquivo = $_FILES['arquivo'];
+$foto = $dir . $arquivo['name'];
+
 $sinopse = $_POST['sinopse'];
+
+move_uploaded_file($arquivo['tmp_name'] , "$dir/" . $arquivo['name']);
 
 $sqlAlterar = "UPDATE tb_livros set
                 isbn = '{$isbn}',

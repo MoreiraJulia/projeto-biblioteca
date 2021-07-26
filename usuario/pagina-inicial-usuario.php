@@ -9,7 +9,7 @@
 <div class="container">
     <h2 class="mt-5">Seja bem-vindo(a) Usuário</h2>
     <div class="row mt-5 d-flex justify-content-evenly">
-        <a href="#" class="col-md-4 links"><div class="text-center">
+        <a href="informacoes-pessoais.php" class="col-md-4 links"><div class="text-center">
             <div class="h-100 p-5 bg-light border rounded-3">
                 <img src="../img/peopleG.png">
                 <h3 class="mt-2">Informações pessoais</h3>
