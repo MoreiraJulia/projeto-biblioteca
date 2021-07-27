@@ -40,7 +40,7 @@ $sqlAlterar = "UPDATE tb_livros set
 $resultado = mysqli_query($conexao, $sqlAlterar);
 
 if($resultado){
-    header('location:listagem-livros.php?mensagem=alterado');
+    header('location:pagina-inicial-funcionario.php?mensagem=alteradoLivro');
 }else{
     echo "Ocorreu algum erro";
 }

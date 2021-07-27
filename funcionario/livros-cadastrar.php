@@ -39,7 +39,7 @@ $sqlInserir = "INSERT INTO tb_livros(isbn, nome_livro, genero, serie, classifica
 $resultado = mysqli_query($conexao , $sqlInserir);
 
 if($resultado){
-    header('location:pagina-inicial-funcionario.php?mensagem=cadastrado');
+    header('location:pagina-inicial-funcionario.php?mensagem=cadastradoLivro');
 }else{
     echo "Algo deu errado.";
 }

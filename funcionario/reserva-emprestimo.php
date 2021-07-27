@@ -23,9 +23,30 @@ $sqlBusca = "SELECT
 $listaDeLivros = mysqli_query($conexao , $sqlBusca);
 
 ?>
+<div class="container mt-5">
 
-<div class="container">
-    <div class="py-5">
+<?php if(isset($_GET['mensagem'])){
+        if($_GET['mensagem'] == 'emprestado'){
+            ?>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Livro</strong> emprestado
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php 
+        }
+        if($_GET['mensagem'] == 'devolvido'){
+        ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Livro</strong> devolvido
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php
+        }
+    }
+        ?>
+
+
+    <div class="py-3">
         <h2>Livros reservados </h2>
         <table class="table mt-4 text-center">
             <tr class="table-success">

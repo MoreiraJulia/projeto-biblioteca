@@ -4,29 +4,45 @@
     if (!isset($_SESSION['nomeFuncionario'])){
         header('Location: funcionario-login.php?');
     }
-
-
-
 ?>
 
 <div class="container">
     <h2 class="mt-5 py-3">Bem vindo <?php echo $_SESSION["nomeFuncionario"]; ?></h2>
 
     <?php if(isset($_GET['mensagem'])){
-        if($_GET['mensagem'] == 'cadastrado'){
+        if($_GET['mensagem'] == 'cadastradoLivro'){
             ?>
-            <div class="alert alert-primary">
-                Cadastrado com sucesso!
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Livro</strong> cadastrado com sucesso!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <?php 
+        <?php 
         }
-        if($_GET['mensagem'] == 'excluido'){
+        if($_GET['mensagem'] == 'excluidoLivro'){
         ?>
-            <div class="alert alert-danger">
-                Excluido com sucesso!
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Livro</strong> excluido com sucesso!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         <?php
         }
+        if($_GET['mensagem'] == 'alterado'){
+            ?>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Alterado</strong> com sucesso!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php
+        }
+        if($_GET['mensagem'] == 'cadastrado'){
+            ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Usuário</strong> cadastrado com sucesso!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
+        }
+        
     }
     ?>
 

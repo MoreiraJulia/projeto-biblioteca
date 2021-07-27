@@ -24,16 +24,7 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
         </form>
     </div>
 
-    <?php if(isset($_GET['mensagem'])){
-     if($_GET['mensagem'] == 'alterado'){
-        ?>
-        <div class="alert alert-warning">
-            Alterado com sucesso!
-        </div>
-    <?php
-        }
-    }
-    ?>
+    
 
         <table class="table mt-4 text-center">
             <tr class="row table-success">

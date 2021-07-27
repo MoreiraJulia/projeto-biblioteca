@@ -7,7 +7,7 @@
 ?>
 
 <div class="container">
-    <h2 class="mt-5">Seja bem-vindo(a) Usuário</h2>
+    <h2 class="mt-5">Seja bem-vindo(a) <?php echo $_SESSION["NomeUsuario"]; ?></h2>
     <div class="row mt-5 d-flex justify-content-evenly">
         <a href="informacoes-pessoais.php" class="col-md-4 links"><div class="text-center">
             <div class="h-100 p-5 bg-light border rounded-3">

@@ -6,6 +6,7 @@
                     aria-current="true"></button>
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -16,6 +17,9 @@
                 </div>
                 <div class="carousel-item">
                     <img src="../img/home6.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/home7.jpg" class="d-block w-100">
                 </div>
             </div>
 

@@ -6,7 +6,7 @@ $sqlAlterar ="UPDATE tb_agendar SET status='Emprestado' WHERE id={$id}";
 $resultado = mysqli_query($conexao, $sqlAlterar);
 
 if($resultado){
-    header('location:reserva-emprestimo.php');
+    header('location:reserva-emprestimo.php?mensagem=emprestado');
     echo "Excluído com sucesso";
 }else{
     echo "Ocorreu algum problema";
