@@ -48,7 +48,7 @@ if (!isset($_SESSION['nomeFuncionario'])){
             <label class="form-label" for="validationDefault13">Foto:</label>
             <input type="file" name="arquivo_usuario" class="form-control" id="validationDefault13" required>
         </p> 
-        <p class="col-5">
+        <p class="col-6">
             <label class="form-label" for="validationDefault10">Comprovante de Residência:</label>
             <input type="file" name="arquivo_residencia" class="form-control" id="validationDefault10" required>
         </p> 

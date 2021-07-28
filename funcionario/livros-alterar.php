@@ -14,13 +14,14 @@ $disponibilidade = "";
 if(isset($_POST['disponibilidade'])){
     $disponibilidade = $_POST['disponibilidade'];
 }
-$dir = "images/";
-$arquivo = $_FILES['arquivo'];
-$foto = $dir . $arquivo['name'];
+
+// $dir = "images/";
+// $arquivo = $_FILES['arquivo'];
+// $foto = $dir . $arquivo['name'];
 
 $sinopse = $_POST['sinopse'];
 
-move_uploaded_file($arquivo['tmp_name'] , "$dir/" . $arquivo['name']);
+// move_uploaded_file($arquivo['tmp_name'] , "$dir/" . $arquivo['name']);
 
 $sqlAlterar = "UPDATE tb_livros set
                 isbn = '{$isbn}',
@@ -33,7 +34,7 @@ $sqlAlterar = "UPDATE tb_livros set
                 nome_autor = '{$nome_autor}',
                 endereco_biblioteca = '{$endereco_biblioteca}',
                 disponibilidade = '{$disponibilidade}',
-                foto = '{$foto}',
+                -- foto = '{$foto}',
                 sinopse = '{$sinopse}'
                 WHERE id = {$id_livro}";
 

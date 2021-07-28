@@ -18,7 +18,14 @@ if(($resultado_user) AND ($resultado_user->num_rows != 0)){
         echo "{$row_user['genero']}<br>";
         echo "{$row_user['nome_autor']}<br>";
         echo "{$row_user['endereco_biblioteca']}</p>";
-        echo "{$row_user['status']}</p>";
+        if($row_user['status'] == "Reservado"){
+            echo "<button type='button' class='btn btn-danger'>Indisponível</button>";
+        }else if($row_user['status'] == "Emprestado"){
+            echo "<button type='button' class='btn btn-danger'>Indisponível</button>";
+        }else{
+            echo "<a type='button' class='btn btn-success' href='../paginas/mostruario-livros.php?id_livro={$row_user['id']}'>Disponível</a>";
+        }
+        // echo "{$row_user['status']}</p>";
         echo "</div>";
     }
 }else{

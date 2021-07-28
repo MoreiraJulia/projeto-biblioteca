@@ -51,11 +51,12 @@ $listarUsuarios = mysqli_query($conexao , $sqlBusca);
                         echo "<td>{$row_usuario['data_nascimento']}</td>";
                         echo "<td>{$row_usuario['cpf']}</td>";
                         echo "<td>{$row_usuario['telefone']}</td>";
-                        echo "<td><a class='btn btn-warning' href='usuarios-visualizar.php?id_usuario={$row_usuario['id']}'><i class='bi bi-pencil-square'></i></a></td>";
+                        echo "<td><a class='btn btn-warning' href='usuarios-visualizar.php?id_usuario={$row_usuario['id']}'><i class='bi bi-eye-fill'></i></a></td>";
                         echo "</tr>";
 
                     }
                 }
+                
         
         ?>
     

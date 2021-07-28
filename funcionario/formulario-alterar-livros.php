@@ -76,11 +76,9 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
             <label class="form-label">Biblioteca disponível:</label>
             <input name="endereco_biblioteca" class="form-control" value="<?php echo $endereco_biblioteca;?>">
         </p>
-        <p class="col-6">
-            <label class="form-label">Foto:</label>
-            <input type="file" name="arquivo" class="form-control" value="<?php echo $foto;?>">
-        </p> 
-        <div class="col-6 mt-4">
+        
+        
+        <div class="col-2 mt-4">
             <div class="form-check">
             <?php 
             $marcado = "";
@@ -94,12 +92,15 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
                 </label>
             </div>
         </div>
-        
-        <p class="col-12">
+        <!-- <p class="col-6">
+            <label class="form-label">Foto:</label>
+            <img src="<?php echo $foto;?>" style="width:90px;">
+            <input type="file" name="arquivo" class="form-control" >
+        </p>  -->
+        <p class="col-10">
             <label class="form-label">Sinopse</label>
             <textarea class="form-control" name="sinopse" ><?php echo $sinopse;?></textarea>
         </p>
-   
         <div class="d-md-flex justify-content-md-center mt-4">
             <button type="submit" class="btn btn-primary">Salvar</button>
         </div>

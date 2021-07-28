@@ -50,7 +50,7 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
                 <?php }else if($status == "Emprestado"){?>
                     <button type="button" class="btn btn-danger">Indisponível</button>
                 <?php }else if(!isset($_SESSION['NomeUsuario'])){
-                        echo "<button type='button' class='btn btn-success'>Disponível</button>";
+                        echo "<a type='button' class='btn btn-success' href='../usuario/usuario-login.php'>Disponível</a>";
                     }else{
                 ?>
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addAgendaModal">Disponível</button>
