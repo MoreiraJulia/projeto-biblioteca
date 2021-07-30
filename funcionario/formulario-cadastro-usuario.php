@@ -63,9 +63,7 @@ if (!isset($_SESSION['nomeFuncionario'])){
         <div class="d-md-flex justify-content-md-center mt-4">
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </div>
-
     </form>
-
 </div>
 
 <?php include "../includes/rodape.php";?>

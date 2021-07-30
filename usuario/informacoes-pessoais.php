@@ -1,6 +1,6 @@
 <?php include "../includes/cabecalho.php"; 
-include "../includes/conexao.php"; ?>
-<?php
+include "../includes/conexao.php"; 
+
     if(!isset($_SESSION['NomeUsuario'])){
         header('Location: usuario-login.php?');
     }
@@ -58,6 +58,5 @@ include "../includes/conexao.php"; ?>
             </div>
         </div>
     </div>
-
 
 <?php include "../includes/rodape.php"; ?>

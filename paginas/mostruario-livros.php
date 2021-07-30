@@ -5,7 +5,6 @@ $id_livro = $_GET['id_livro'];
 
 $sqlBuscar = "SELECT tb_livros.*, tb_agendar.status FROM tb_livros LEFT JOIN tb_agendar ON tb_livros.id = tb_agendar.id_livro WHERE tb_livros.id={$id_livro}";
 
-
 $listaDeLivros = mysqli_query($conexao, $sqlBuscar);
 
 $id = $isbn = $nome_livro = $genero = $serie = $classificacao = $editora = $edicao = $nome_autor = $endereco_biblioteca = $foto = $sinopse = $status = "";
@@ -35,8 +34,7 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
             <img src="../funcionario/<?php echo $foto;?>">
         </div>
         <div class="col-4 fs-5">
-            <p>
-                ISBN: <?php echo $isbn;?><br>
+            <p>ISBN: <?php echo $isbn;?><br>
                 Gênero: <?php echo $genero;?><br>
                 Série: <?php echo $serie;?><br>
                 Classificação: <?php echo $classificacao;?> anos<br>

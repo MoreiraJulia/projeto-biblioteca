@@ -1,5 +1,3 @@
-
-
 <?php include "../includes/cabecalho.php"; ?>
 
 <div class="container">
@@ -13,28 +11,27 @@
             </div>
             <div class="col-md-5">
                 <div class="h-100 p-5 bg-light border rounded-3">
-                <h2 class="text-center">Login Usuário</h2>
-                <form class="row mt-4" method="post" action="login-usuario.php">
-                    <div class="col-md-12">
-                        <label class="form-label">Nome:</label>
-                        <input class="form-control" type="text" name="NomeUsuario">
-                    </div>
-                    <div class="col-md-12 mt-3">
-                        <label class="form-label">Número da carteirinha:</label>
-                        <input class="form-control" type="password" name="CarteirinhaUsuario">
-                    </div>
-                    <div class="d-flex justify-content-md-center">
-                        <div class="col-3">
-                            <button class="btn btn-primary mt-3" type="submit">Entrar</button>
+                    <h2 class="text-center">Login Usuário</h2>
+                    <form class="row mt-4" method="post" action="login-usuario.php">
+                        <div class="col-md-12">
+                            <label class="form-label">Nome:</label>
+                            <input class="form-control" type="text" name="NomeUsuario">
                         </div>
-                    </div>
-                </form>
+                        <div class="col-md-12 mt-3">
+                            <label class="form-label">Número da carteirinha:</label>
+                            <input class="form-control" type="password" name="CarteirinhaUsuario">
+                        </div>
+                        <div class="d-flex justify-content-md-center">
+                            <div class="col-3">
+                                <button class="btn btn-primary mt-3" type="submit">Entrar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="py-5"></div>
 
 <?php include "../includes/rodape.php"; ?>

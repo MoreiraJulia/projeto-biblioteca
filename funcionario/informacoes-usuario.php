@@ -26,42 +26,35 @@ $listarUsuarios = mysqli_query($conexao , $sqlBusca);
             <input name="listarUsuarios" class="btn btn-danger" type="submit" value="Pesquisar">
         </form>
     </div>
+    <table class="table mt-4 text-center">
+        <tr class="table-success">
+            <td>ID</td>
+            <td>Nome</td>
+            <td>Data de nascimento</td>
+            <td>CPF</td>
+            <td>Telefone</td>
+            <td>Ações</td>
+        </tr>
 
-        <table class="table mt-4 text-center">
-            <tr class="table-success">
-                <td>ID</td>
-                <td>Nome</td>
-                <td>Data de nascimento</td>
-                <td>CPF</td>
-                <td>Telefone</td>
-                <td>Ações</td>
-            </tr>
-
-            <?php
-            $listarUsuarios = filter_input(INPUT_POST, 'listarUsuarios', FILTER_SANITIZE_STRING);
-                if($listarUsuarios){
-                    $nomeUsuario = filter_input(INPUT_POST, 'nomeUsuario', FILTER_SANITIZE_STRING);
-                    $result_usuario = "SELECT * FROM tb_usuarios WHERE nome LIKE '%$nomeUsuario%'";
-                    $resultado_usuario = mysqli_query($conexao, $result_usuario);
-                    while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
-                        // echo "ID: " . $row_livro['nome_livro'] . "<br>";
-                        echo "<tr>";
-                        echo "<td>{$row_usuario['id']}</td>";
-                        echo "<td>{$row_usuario['nome']}</td>";
-                        echo "<td>{$row_usuario['data_nascimento']}</td>";
-                        echo "<td>{$row_usuario['cpf']}</td>";
-                        echo "<td>{$row_usuario['telefone']}</td>";
-                        echo "<td><a class='btn btn-warning' href='usuarios-visualizar.php?id_usuario={$row_usuario['id']}'><i class='bi bi-eye-fill'></i></a></td>";
-                        echo "</tr>";
-
-                    }
+        <?php 
+        $listarUsuarios = filter_input(INPUT_POST, 'listarUsuarios', FILTER_SANITIZE_STRING);
+            if($listarUsuarios){
+                $nomeUsuario = filter_input(INPUT_POST, 'nomeUsuario', FILTER_SANITIZE_STRING);
+                $result_usuario = "SELECT * FROM tb_usuarios WHERE nome LIKE '%$nomeUsuario%'";
+                $resultado_usuario = mysqli_query($conexao, $result_usuario);
+                while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
+                    echo "<tr>";
+                    echo "<td>{$row_usuario['id']}</td>";
+                    echo "<td>{$row_usuario['nome']}</td>";
+                    echo "<td>{$row_usuario['data_nascimento']}</td>";
+                    echo "<td>{$row_usuario['cpf']}</td>";
+                    echo "<td>{$row_usuario['telefone']}</td>";
+                    echo "<td><a class='btn btn-warning' href='usuarios-visualizar.php?id_usuario={$row_usuario['id']}'><i class='bi bi-eye-fill'></i></a></td>";
+                    echo "</tr>";
                 }
-                
-        
+            }
         ?>
-    
-        </table>
-   
+    </table>
 </div>
 
 <?php include "../includes/rodape.php"; ?>

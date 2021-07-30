@@ -6,9 +6,7 @@
 ?>
 
 <div class="container">
-
     <h1 class="mt-5 py-5">Cadastro de livros</h1>
-
     <form name="cadastro-livros" method="post" action="livros-cadastrar.php" class="row mt-3" enctype="multipart/form-data">
         <p class="col-4">
             <label class="form-label" for="validationDefault01">ISBN-13:</label>
@@ -54,9 +52,7 @@
         <div class="col-6 mt-4">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="Disponível" name="disponibilidade" required>
-                <label class="form-check-label" for="validationDefault11">
-                    Disponível
-                </label>
+                <label class="form-check-label" for="validationDefault11">Disponível</label>
             </div>
         </div>
         <div class="col-12">
@@ -67,9 +63,7 @@
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </div>
     </form>
-
 </div>
-
 <div class="py-5"></div>
 
 <?php include "../includes/rodape.php"; ?>

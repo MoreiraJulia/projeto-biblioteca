@@ -23,8 +23,7 @@
                         </div>
                         <div class="d-flex justify-content-md-center">
                             <div class="col-3">
-                                <button class="btn btn-primary mt-3" type="submit">Entrar</button>
-                                
+                                <button class="btn btn-primary mt-3" type="submit">Entrar</button>   
                             </div>
                         </div>
                     </form>
@@ -33,7 +32,6 @@
         </div>
     </div>
 </div>
-
 <div class="py-5"></div>
 
 <?php include "../includes/rodape.php"; ?>

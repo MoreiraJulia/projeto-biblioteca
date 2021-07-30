@@ -65,7 +65,6 @@ while($usuario = mysqli_fetch_assoc($listaUsuario)){
     <div class="row mt-3">
         <div class="row col-md-12 position-relzative">
             <?php
-
             $sqlBuscarAgenda = "SELECT tb_agendar.id,
             tb_livros.foto as 'foto',
             tb_livros.nome_livro as 'nome_livro',
@@ -80,33 +79,33 @@ while($usuario = mysqli_fetch_assoc($listaUsuario)){
             inner join tb_usuarios on tb_agendar.id_usuario = tb_usuarios.id WHERE id_usuario={$id_usuario}";
 
             $listaAgendaUsuario = mysqli_query($conexao, $sqlBuscarAgenda);
-        
-                while($usuarioAgenda = mysqli_fetch_assoc($listaAgendaUsuario)){
-                    echo "<p class='col-2 p-md-4'>";
-                    echo "<img src='{$usuarioAgenda['foto']}'  class='img-fluid rounded-start'>";
-                    echo "</p>";
-                    echo "<div class='col-2 p-4 ps-md-0'>";
-                    echo "<h6>{$usuarioAgenda['nome_livro']}</h6>";
-                    echo "<p>";
-                    echo "{$usuarioAgenda['serie']}<br>";
-                    echo "{$usuarioAgenda['nome_autor']}<br>";
+            while($usuarioAgenda = mysqli_fetch_assoc($listaAgendaUsuario)){
+                echo "<p class='col-2 p-md-4'>";
+                echo "<img src='{$usuarioAgenda['foto']}'  class='img-fluid rounded-start'>";
+                echo "</p>";
+                echo "<div class='col-2 p-4 ps-md-0'>";
+                echo "<h6>{$usuarioAgenda['nome_livro']}</h6>";
+                echo "<p>";
+                echo "{$usuarioAgenda['serie']}<br>";
+                echo "{$usuarioAgenda['nome_autor']}<br>";
 
-                    $dataRetirada = date('d-m-Y', strtotime($usuarioAgenda['data_retirada']));
-                    echo "<td>{$dataRetirada}</td><br>";
+                $dataRetirada = date('d-m-Y', strtotime($usuarioAgenda['data_retirada']));
+                echo "<td>{$dataRetirada}</td><br>";
 
-                    $dataDevolucao = date('d-m-Y', strtotime($usuarioAgenda['data_devolucao']));
-                    echo "<td>{$dataDevolucao}</td><br>";
+                $dataDevolucao = date('d-m-Y', strtotime($usuarioAgenda['data_devolucao']));
+                echo "<td>{$dataDevolucao}</td><br>";
                     
-                    if($usuarioAgenda['status'] =='Reservado'){
-                        echo "<button type='button' class='btn btn-warning mt-2'>Reservado</button>";
-                    }else{
-                        echo "<button type='button' class='btn btn-danger mt-2'>Emprestado</button>";
-                    } 
-                    echo "</p>";
-                    echo "</div>";
-                }
+                if($usuarioAgenda['status'] =='Reservado'){
+                    echo "<button type='button' class='btn btn-warning mt-2'>Reservado</button>";
+                }else{
+                    echo "<button type='button' class='btn btn-danger mt-2'>Emprestado</button>";
+                } 
+                echo "</p>";
+                echo "</div>";
+            }
             ?>
         </div>
     </div>
 </div>
+
 <?php include "../includes/rodape.php"; ?>

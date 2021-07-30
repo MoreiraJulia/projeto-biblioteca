@@ -3,9 +3,7 @@
 if (!isset($_SESSION['nomeFuncionario'])){
     header('Location: funcionario-login.php?');
 }
-?>
 
-<?php 
 include "../includes/conexao.php";
 
 $sqlBusca = "SELECT
@@ -19,35 +17,31 @@ $sqlBusca = "SELECT
             inner join tb_livros on tb_agendar.id_livro = tb_livros.id
             inner join tb_usuarios on tb_agendar.id_usuario = tb_usuarios.id WHERE status='Reservado'";
 
-
 $listaDeLivros = mysqli_query($conexao , $sqlBusca);
 
 ?>
+
 <div class="container mt-5">
-
-<?php if(isset($_GET['mensagem'])){
-        if($_GET['mensagem'] == 'emprestado'){
-            ?>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Livro</strong> emprestado
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php 
-        }
-        if($_GET['mensagem'] == 'devolvido'){
-        ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Livro</strong> devolvido
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php
-        }
-    }
-        ?>
-
+<?php 
+if(isset($_GET['mensagem'])){
+    if($_GET['mensagem'] == 'emprestado'){
+?>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Livro</strong> emprestado
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php }
+    if($_GET['mensagem'] == 'devolvido'){
+    ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Livro</strong> devolvido
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php }
+    }?>
 
     <div class="py-3">
-        <h2>Livros reservados </h2>
+        <h2>Livros reservados</h2>
         <table class="table mt-4 text-center">
             <tr class="table-success">
                 <td>ID</td>
@@ -87,7 +81,6 @@ $listaDeLivros = mysqli_query($conexao , $sqlBusca);
                 inner join tb_usuarios on tb_agendar.id_usuario = tb_usuarios.id WHERE status='Emprestado'";
 
 $listaDeLivros = mysqli_query($conexao , $sqlBuscar);
-
 ?>
     <h2>Livros emprestados</h2>
     <table class="table mt-4 text-center">

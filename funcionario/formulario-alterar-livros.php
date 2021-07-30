@@ -1,18 +1,14 @@
 <?php include "../includes/cabecalho.php"; 
 
-
     if (!isset($_SESSION['nomeFuncionario'])){
         header('Location: funcionario-login.php?');
     }
-
-
 
 include "../includes/conexao.php"; 
 
 $id_livro = $_GET['id_livro'];
 
 $sqlBuscar = "SELECT * FROM tb_livros WHERE id={$id_livro}";
-
 
 $listaDeLivros = mysqli_query($conexao, $sqlBuscar);
 
@@ -34,11 +30,9 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
 }
 ?>
 
-
 <div class="container">
     <form name="formulario-alterar-livros" class="mt-5 row" method="post" action="livros-alterar.php">
         <input name="id_livro" type="hidden" value="<?php echo $id_livro;?>">
-
         <p class="col-4">
             <label class="form-label">ISBN-13:</label>
             <input name="isbn" class="form-control" min="14" maxlength="14" value="<?php echo $isbn;?>">
@@ -87,9 +81,7 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
             }
             ?>
                 <input class="form-check-input" type="checkbox" value="Disponível" <?php echo $marcado;?> name="disponibilidade" >
-                <label class="form-check-label">
-                    Disponível
-                </label>
+                <label class="form-check-label">Disponível</label>
             </div>
         </div>
         <!-- <p class="col-6">
@@ -105,7 +97,6 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
             <button type="submit" class="btn btn-primary">Salvar</button>
         </div>
     </form>
-
 </div>
 
 <?php include "../includes/rodape.php" ?>
