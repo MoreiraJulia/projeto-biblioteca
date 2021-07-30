@@ -37,31 +37,33 @@
         <div class="container">
             <!--Valores-->
             <article class="mt-5">
-                <h2 class="text-center">Título</h2>
+                <!-- <h2 class="text-center">Título</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem dolor soluta vero accusantium
                     consectetur accusamus eligendi veritatis iusto vel repellendus perferendis error sequi, quae quidem
-                    doloribus nemo corporis debitis modi.</p>
+                    doloribus nemo corporis debitis modi.</p> -->
                 <div class="row mt-5">
                     <div class="col-sm-1">
                         <i class="bi bi-book fs-3 bg-dark text-white rounded-circle"></i>
                     </div>
                     <div class="col-sm-3">
-                        <h4>Agenda</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <h4>Valores</h4>
+                        <p>Crescer e evoluir juntos;<br>
+                        Responsabilidade;<br>
+                        Diversidade.</p>
                     </div>
                     <div class="col-sm-1">
                         <i class="bi bi-book fs-3 bg-dark text-white rounded-circle"></i>
                     </div>
                     <div class="col-sm-3">
-                        <h4>Valores</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <h4>Livros</h4>
+                        <p>Nossos livros são devidamente conservados, para que chegue até você da melhor forma possível.</p>
                     </div>
                     <div class="col-sm-1">
                         <i class=" bi bi-book fs-3 bg-dark text-white rounded-circle"></i>
                     </div>
                     <div class="col-sm-3">
                         <h4>Segurança</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <p>Esperamos em troca de você leitor, manter esses livros a salvos.</p>
                     </div>
                 </div>
             </article>

@@ -7,8 +7,8 @@
                     <h2>Quem Somos</h2>
                     <p>
                         As bibliotecas de Santa Bárbara d'Oeste são formadas por 3 unidades, sendo elas a central(Nova
-                        Biblioteca Pública), que fica localizada no centro de SBO e outras duas(Léo Sallum e CEU das
-                        Artes). A biblioteca Central foi inauguradaem 15 de junho de 1968, inicialmente localizada em um
+                        Biblioteca Pública), que fica localizada no centro de SBO e outras duas(Léo Sallum e CÉU das
+                        Artes). A biblioteca Central foi inaugurada em 15 de junho de 1968, inicialmente localizada em um
                         prédio na Rua Santa Bárbara com apenas 2.500 livros, mais tarde foi reconstruída em outro lugar.
                         No decorrer dos anos as bibliotecas foram reformadas e os acervos aumentados.
                     </p>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="mt-0">
                     <h4>
-                        CEU das Artes
+                        CÉU das Artes
                     </h4>
                     <p>
                         Rua Argeu Egídio dos Santos, 100 -<br> Planalto do SOL ||,<br> Santa Bárbara d'Oeste<br>
