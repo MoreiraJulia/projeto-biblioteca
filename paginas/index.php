@@ -1,28 +1,26 @@
 <?php include "../includes/cabecalho.php"; ?>
 
 <div id="MeuCarousel" class="carousel carousel-dark slide mt-4" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../img/home4.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/home5.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/home6.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/home7.jpg" class="d-block w-100">
-                </div>
-            </div>
-
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../img/home4.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+            <img src="../img/home5.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+            <img src="../img/home6.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+            <img src="../img/home8.jpg" class="d-block w-100">
+        </div>
+    </div>
             <!--Botões do banner rotativo-->
             <button class="carousel-control-prev" type="button" data-bs-target="#MeuCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -33,7 +31,6 @@
                 <span class="visually-hidden carousel-dark"></span>
             </button>
         </div>
-
         <div class="container">
             <!--Valores-->
             <article class="mt-5">
