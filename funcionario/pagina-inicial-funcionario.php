@@ -6,7 +6,7 @@
 ?>
 
 <div class="container">
-    <h2 class="mt-5 py-3">Bem vindo <?php echo $_SESSION["nomeFuncionario"]; ?></h2>
+    <h2 class="mt-5 py-3">Bem vindo(a) <?php echo $_SESSION["nomeFuncionario"]; ?></h2>
     <?php if(isset($_GET['mensagem'])){
         if($_GET['mensagem'] == 'cadastradoLivro'){?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -40,36 +40,28 @@
     <div class="row mt-5 d-flex justify-content-evenly">
         <a href="informacoes-usuario.php" class="col-md-4 links">
             <div class="text-center">
-                <div class="h-100 p-5 bg-light border rounded-3">
-                    <img src="../img/peopleG.png">
-                    <h3 class="mt-2">Informações dos usuários</h3>
-                </div>
+                <img src="../img/informacao-user.png">
+                <h3 class="mt-2 link-dark">Informações dos usuários</h3>
             </div>
         </a>
         <a href="reserva-emprestimo.php" class="col-md-4 links">
             <div class="text-center">
-                <div class="h-100 p-5 bg-light border rounded-3">
-                    <img src="../img/booksG.png"><br>
-                    <h3 class="mt-2">Livros reservados/ emprestados</h3>
-                </div>
+                <img src="../img/calendar.png">
+                <h3 class="mt-2 link-dark">Livros reservados/ emprestados</h3>
             </div>
         </a>
         <a href="formulario-cadastro-livros.php" class="col-md-4 links">
             <div class="text-center">
-                <div class="h-100 p-5 bg-light border rounded-3">
-                    <img src="../img/livroG.png">
-                    <h3 class="mt-2">Cadastramento de livros</h3>
-                </div>
+                <img src="../img/cadastrar-livros.png">
+                <h3 class="mt-2 link-dark">Cadastramento de livros</h3>
             </div>
         </a>
     </div>
-    <div class="row mt-4 d-flex justify-content-evenly">
+    <div class="row mt-5 d-flex justify-content-evenly">
         <a href="listagem-livros.php" class="col-md-4 links">
             <div class="text-center">
-                <div class="h-100 p-5 bg-light border rounded-3">
-                    <img src="../img/lista.png">
-                    <h3 class="mt-2">Listagem de livros</h3>
-                </div>
+                <img src="../img/listagem-livros.png">
+                <h3 class="mt-2 link-dark">Listagem de livros</h3>
             </div>
         </a>
     </div>
