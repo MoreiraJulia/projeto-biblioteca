@@ -27,7 +27,7 @@ Aplicativo web para consulta de livros e controle de agendamento de retiradas da
         - Agenda
             - Listagem de todos os livros reservados ou emprestados
             - Realização do empréstimo de algum livro
-            - Exclusão de algum livro emprestado
+            - Exclusão de algum livro reservado / emprestado 
     - Login Usuário 
         - Acesso às informações pessoais
         - Acesso aos livros que reservados / emprestados em seu nome

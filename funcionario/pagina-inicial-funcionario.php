@@ -38,12 +38,13 @@
         } 
     }?>
     <div class="row mt-5 d-flex justify-content-evenly">
-        <a href="informacoes-usuario.php" class="col-md-4 links">
+        <a href="efetuar-emprestimo.php" class="col-md-4 links">
             <div class="text-center">
-                <img src="../img/informacao-user.png">
-                <h3 class="mt-2 link-dark">Informações dos usuários</h3>
+                <img src="../img/efetuar-emprestimo.png">
+                <h3 class="mt-2 link-dark">Efetuar emprestimo</h3>
             </div>
         </a>
+       
         <a href="reserva-emprestimo.php" class="col-md-4 links">
             <div class="text-center">
                 <img src="../img/calendar.png">
@@ -62,6 +63,12 @@
             <div class="text-center">
                 <img src="../img/listagem-livros.png">
                 <h3 class="mt-2 link-dark">Listagem de livros</h3>
+            </div>
+        </a>
+        <a href="informacoes-usuario.php" class="col-md-4 links">
+            <div class="text-center">
+                <img src="../img/informacao-user.png">
+                <h3 class="mt-2 link-dark">Informações dos usuários</h3>
             </div>
         </a>
     </div>

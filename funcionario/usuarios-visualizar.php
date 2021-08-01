@@ -43,7 +43,7 @@ while($usuario = mysqli_fetch_assoc($listaUsuario)){
             <div class="col-6 fs-5">
                 <p>
                     NÚMERO DA CARTEIRINHA: <?php echo $id; ?><br>
-                    DATA DE NASCIMENTO: <?php echo $data_nascimento; ?><br>
+                    DATA DE NASCIMENTO: <?php echo $data_nascimento = date('d-m-Y'); ?><br>
                     RG: <?php echo $rg; ?><br>
                     CPF: <?php echo $cpf; ?><br>
                     TELEFONE: <?php echo $telefone; ?><br>

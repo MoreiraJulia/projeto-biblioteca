@@ -20,7 +20,7 @@
                 </form>
             </div>
             <div class="col-md-6">
-                <img src="../img/login-usuario.png">
+                <img src="../img/usuario-login.png">
             </div>
         </div>
     </div>

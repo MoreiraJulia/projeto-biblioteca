@@ -1,7 +1,7 @@
 <?php include "../includes/cabecalho.php"; ?>
 
 <div class="container">
-    <div class="px-3 py-5">
+    <div class="mt-5">
         <div class="row">
             <div class="col-md-6 d-flex align-content-center flex-wrap">
                 <h2>Login Funcionário</h2>
@@ -20,11 +20,11 @@
                 </form>
             </div>
             <div class="col-md-6">
-                <img src="../img/login-funcionario.png">
+                <img src="../img/funcionario-login.png">
             </div>
         </div>
     </div>
 </div>
-<div class="py-5"></div>
+<div class="py-4"></div>
 
 <?php include "../includes/rodape.php"; ?>

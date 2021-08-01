@@ -5,13 +5,11 @@
         <div class="row mt-5 text-center">
             <div class="col-md-6">
                 <h2>Faça login aqui</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora dignissimos quia voluptatum voluptates voluptatem molestias.</p>
-                <!-- <div class="h-100 p-5 bg-light border rounded-3"> -->
+                <p>Faça login para ter acesso a uma página personalizada, especialmente para você!</p>
                 <div class="mt-4">
                     <h4>Quem está logando?</h4>
-                    <button class="btn btn-primary mt-3" type="submit"><a href="../usuario/usuario-login.php" class="link-light links">Usuário</a></button>
-                    <button class="btn btn-primary mt-3" type="submit"><a href="../funcionario/funcionario-login.php" class="link-light links">Funcionário</a></button>
-                    
+                    <a href="../usuario/usuario-login.php" class="link-light links btn btn-primary mt-3">Usuário</a>
+                    <a href="../funcionario/funcionario-login.php" class="link-light links btn btn-primary mt-3">Funcionário</a>
                 </div>
             </div>
             <div class="col-md-6">
