@@ -46,7 +46,6 @@ $listarUsuarios = mysqli_query($conexao , $sqlBusca);
                     echo "<tr>";
                     echo "<td>{$row_usuario['id']}</td>";
                     echo "<td>{$row_usuario['nome']}</td>";
-                    // echo "<td>{$row_usuario['data_nascimento']}</td>";
                     
                     $dataNascimento = date('d-m-Y', strtotime($row_usuario['data_nascimento']));
                     echo "<td>{$dataNascimento}</td>";

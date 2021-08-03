@@ -6,7 +6,7 @@
  
 include "../includes/conexao.php";
 
-$sqlBusca = "SELECT id, isbn, nome_livro, serie, nome_autor FROM tb_livros";
+$sqlBusca = "SELECT * FROM tb_livros";
 
 $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
 
@@ -45,11 +45,34 @@ $listagemDeLivros = mysqli_query($conexao , $sqlBusca);
                     echo "<td class='col-2'>{$row_livro['serie']}</td>";
                     echo "<td class='col-2'>{$row_livro['nome_autor']}</td>";
                     echo "<td class='col-2'><a class='btn btn-warning' href='formulario-alterar-livros.php?id_livro={$row_livro['id']}'><i class='bi bi-pencil-square'></i></a> | ";
-                    echo "<a class='btn btn-danger' href='livros-excluir.php?id_livro={$row_livro['id']}'><i class='bi bi-x-square'></i></a></td>";
-                    echo "</tr>"; 
+                
+                    echo "<button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#addAgendaModal'><i class='bi bi-x-square'></i></button></td>";
+                    echo "</tr>";
+                    ?>
+                    <div class="modal fade row" id="addAgendaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-danger">
+                                    <h5 class="modal-title text-white" id="addAgendaModalLabel">Excluir o livro "<?php echo "{$row_livro['nome_livro']}";?>"</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Tem certeza que deseja excluir este livro?</p>
+                                </div>
+                                <div class='modal-footer'>
+                                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
+                                    <?php
+                                    echo "<a class='btn btn-success' href='livros-excluir.php?id_livro={$row_livro['id']}'>Sim</a>";?>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <?php
                 }
-            }
+            };
         ?>
+        
     </table> 
 </div>
 
