@@ -5,23 +5,19 @@
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true"></button>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"></button>
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="../img/home4.jpg" class="d-block w-100">
+            <img src="../img/home11.png" class="d-block w-100">
         </div>
         <div class="carousel-item">
-            <img src="../img/home5.jpg" class="d-block w-100">
+            <img src="../img/home12.png" class="d-block w-100">
         </div>
         <div class="carousel-item">
-            <img src="../img/home6.jpg" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-            <img src="../img/home8.jpg" class="d-block w-100">
+            <img src="../img/home13.png" class="d-block w-100">
         </div>
     </div>
-    <!--Botões do banner rotativo-->
+    <!-- Botões do banner rotativo -->
     <button class="carousel-control-prev" type="button" data-bs-target="#MeuCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden"></span>
@@ -31,12 +27,13 @@
         <span class="visually-hidden carousel-dark"></span>
     </button>
 </div>
-<div class="container">
+
+<div class="container py-5">
     <!--Valores-->
-    <article class="mt-5">
+    <article>
         <div class="row mt-5">
             <div class="col-sm-1">
-                <i class="bi bi-book fs-3 bg-dark text-white rounded-circle"></i>
+               <i class="bi bi-bookmark-check-fill fs-3 bg-success text-white rounded-circle"></i>
             </div>
             <div class="col-sm-3">
                 <h4>Valores</h4>
@@ -45,14 +42,14 @@
                 Diversidade.</p>
             </div>
             <div class="col-sm-1">
-                <i class="bi bi-book fs-3 bg-dark text-white rounded-circle"></i>
+                <i class="bi bi-bookmark-check-fill fs-3 bg-success text-white rounded-circle"></i>
             </div>
             <div class="col-sm-3">
                 <h4>Livros</h4>
                 <p>Nossos livros são devidamente conservados, para que chegue até você da melhor forma possível.</p>
             </div>
             <div class="col-sm-1">
-                <i class=" bi bi-book fs-3 bg-dark text-white rounded-circle"></i>
+                <i class="bi bi-bookmark-check-fill fs-3 bg-success text-white rounded-circle"></i>
             </div>
             <div class="col-sm-3">
                 <h4>Segurança</h4>
