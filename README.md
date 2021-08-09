@@ -151,7 +151,7 @@ CREATE TABLE `tb_usuarios` (
   `id` int(6) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `data_nascimento` date NOT NULL,
-  `rg` varchar(10) NOT NULL,
+  `rg` varchar(13) NOT NULL,
   `cpf` varchar(14) NOT NULL,
   `telefone` varchar(20) NOT NULL,
   `cep` varchar(9) NOT NULL,

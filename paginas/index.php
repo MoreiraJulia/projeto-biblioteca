@@ -1,4 +1,11 @@
-<?php include "../includes/cabecalho.php"; ?>
+<?php include "../includes/cabecalho.php"; 
+include "../includes/conexao.php";
+
+$sqlBusca = "SELECT * FROM tb_livros";
+
+$listaLivros = mysqli_query($conexao, $sqlBusca);
+
+?>
 
 <div id="MeuCarousel" class="carousel carousel-dark slide mt-4" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -58,10 +65,39 @@
         </div>
     </article>
 
-    <!--Notícias de capa-->
+    <article class="mt-5 row">
+        <div class="text-center">
+            <h2>Esta curioso para saber quais livros temos?</h2>
+        </div>
+        <div class="col-md-4">
+            <div id="carouselExampleSlidesOnly" class="carousel slide mt-4" data-bs-ride="carousel">
+                <div class="carousel-inner col-md-2">
+                    <div class="carousel-item active">
+                        <img src="../img/a-rainha-vermelha.jpeg" class="d-block " alt="Foto do livro A rainha vermelha" style="width: 250px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/amor-sob-encomenda.jpeg" class="d-block" alt="Foto do livro Amor sob encomenda" style="width: 250px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/ladrao-de-raios.jpeg" class="d-block" alt="Foto do livro Percy jackson e o ladrão de raios" style="width: 250px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/um-marido-de-faz-de-conta.jpeg" class="d-block" alt="Foto do livro Um marido de faz de conta" style="width: 250px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 d-flex align-content-center flex-wrap">
+            <p class="fs-4">Não passe vontade acesse a nossa página do acervo e fique por dentro de todos os títulos que temos disponivéis em nossas três unidades.</p>
+            <div class="text-center">
+                <a href="acervo.php" class="btn btn-success">Acesse aqui</a>
+            </div>
+        </div>
+    </article>
+    <!-- Notícias de capa 
     <article class="mt-5">
         <h2 class="text-center">Notícias</h2>
-        <!--Primeira linha-->
+         Primeira linha 
         <div class="row mt-3">
             <div class="row col-md-6 g-0 position-relative">
                 <div class="col-md-6 p-md-4">
@@ -86,7 +122,7 @@
         </div>
     </article>
 
-    <!--Segunda linha-->
+    Segunda linha 
     <article class="row mt-3">
         <div class="row col-md-6 g-0 position-relative">
             <div class="col-md-6 p-md-4">
@@ -110,7 +146,7 @@
         </div>
     </article>
 
-    <!--Post do blog da página inicial-->
+    Post do blog da página inicial
     <article class="mt-5">
         <h2 class="text-center">Post do Blog</h2>
         <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa neque placeat est dolorum laudantium deleniti at libero recusandae!</p>
@@ -152,7 +188,8 @@
                 </div>
             </div>
         </div>
-    </article>
+    </article> 
+-->
 </div>   
 
 <?php include "../includes/rodape.php"; ?>
