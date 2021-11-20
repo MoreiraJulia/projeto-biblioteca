@@ -1,12 +1,14 @@
+
+
 i{
     display: block;
     width: 48px;
     text-align: center;
 }
 
-.biblioteca img{
+ /* .biblioteca img{
     width: 150px;
-}
+}  */
 
 .quem-somos,
 .acervo{
@@ -16,4 +18,6 @@ i{
 .links{
     text-decoration: none;
 }
+
+
 

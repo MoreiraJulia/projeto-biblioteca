@@ -9,10 +9,10 @@ $resultado_user = mysqli_query($conexao, $result_user);
 
 if(($resultado_user) AND ($resultado_user->num_rows != 0)){
     while($row_user = mysqli_fetch_assoc($resultado_user)){
-        echo "<div class='col-md-2 p-md-4'>";
+        echo "<div id='most-liv' class='col-md-2 p-md-4'>";
         echo "<a href='../paginas/mostruario-livros.php?id_livro={$row_user['id']}'><img src='../funcionario/{$row_user['foto']}' class='img-fluid rounded-start'></a>";
         echo "</div>";
-        echo "<div class='col-md-4 p-4 ps-md-0'>";
+        echo "<div id='inf-liv' class='col-md-4 p-4 ps-md-0'>";
         echo "<h5>{$row_user['nome_livro']}</h5>";
         echo "<p>{$row_user['serie']}<br>";
         echo "{$row_user['genero']}<br>";
@@ -33,3 +33,5 @@ if(($resultado_user) AND ($resultado_user->num_rows != 0)){
 }
 
 ?>
+
+<link rel="stylesheet" href="style.css">

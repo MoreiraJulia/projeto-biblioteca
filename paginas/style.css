@@ -1,0 +1,44 @@
+@media screen and (max-width: 580px){
+    /* página home */
+    #MeuCarousel{
+        display: none;
+    }
+
+    #logo{
+        width: 170px;
+    }
+
+    #valores{
+        text-align: center;
+    }
+
+    i{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #car-inf-livros{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Página quem somos */
+    #map{
+        width: 200px;
+    }
+
+    /* Página pesquisa-de-livros */
+    #most-liv{
+        width: 160px;
+    }
+
+    #most-liv img{
+        width: 150px;
+        margin-top: 1em;
+    }
+
+    #inf-liv{
+        font-size: 12px;
+        width: 17em;
+    } 
+}

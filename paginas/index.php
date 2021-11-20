@@ -7,7 +7,11 @@ $listaLivros = mysqli_query($conexao, $sqlBusca);
 
 ?>
 
+<link rel="stylesheet" href="style.css">
+
+
 <div id="MeuCarousel" class="carousel carousel-dark slide mt-4" data-bs-ride="carousel">
+    <div class="frase"></div>
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true"></button>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
@@ -37,7 +41,7 @@ $listaLivros = mysqli_query($conexao, $sqlBusca);
 
 <div class="container py-5">
     <!--Valores-->
-    <article>
+    <article id="valores">
         <div class="row mt-5">
             <div class="col-sm-1">
                <i class="bi bi-bookmark-check-fill fs-3 bg-success text-white rounded-circle"></i>
@@ -69,7 +73,7 @@ $listaLivros = mysqli_query($conexao, $sqlBusca);
         <div class="text-center">
             <h2>Esta curioso para saber quais livros temos?</h2>
         </div>
-        <div class="col-md-4">
+        <div id="car-inf-livros" class=" col-md-4">
             <div id="carouselExampleSlidesOnly" class="carousel slide mt-4" data-bs-ride="carousel">
                 <div class="carousel-inner col-md-2">
                     <div class="carousel-item active">
@@ -87,7 +91,7 @@ $listaLivros = mysqli_query($conexao, $sqlBusca);
                 </div>
             </div>
         </div>
-        <div class="col-md-8 d-flex align-content-center flex-wrap">
+        <div id="car-inf-livros" class="col-md-8 d-flex align-content-center flex-wrap">
             <p class="fs-4">Não passe vontade acesse a nossa página do acervo e fique por dentro de todos os títulos que temos disponivéis em nossas três unidades.</p>
             <div class="text-center">
                 <a href="acervo.php" class="btn btn-success">Acesse aqui</a>

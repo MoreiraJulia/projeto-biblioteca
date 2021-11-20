@@ -26,6 +26,8 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
 }
 ?>
 
+<link rel="stylesheet" href="style.css">
+
 <div class="container">
     <h2 class="mt-5"><?php echo $nome_livro;?></h2>
     <input name="id_livro" type="hidden" value="<?php echo $id_livro;?>">
