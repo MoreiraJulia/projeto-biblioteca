@@ -31,11 +31,11 @@ while($livro = mysqli_fetch_assoc($listaDeLivros)){
 <div class="container">
     <h2 class="mt-5"><?php echo $nome_livro;?></h2>
     <input name="id_livro" type="hidden" value="<?php echo $id_livro;?>">
-    <div class="row mt-5">
-        <div class="col-3">
+    <div id="most-livro" class="row mt-5">
+        <div id="most-img" class="col-3">
             <img src="../funcionario/<?php echo $foto;?>">
         </div>
-        <div class="col-4 fs-5">
+        <div id="most-liv-inf" class="col-4 fs-5">
             <p>ISBN: <?php echo $isbn;?><br>
                 Gênero: <?php echo $genero;?><br>
                 Série: <?php echo $serie;?><br>

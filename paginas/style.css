@@ -1,4 +1,4 @@
-@media screen and (max-width: 580px){
+@media screen and (max-width: 710px){
     /* página home */
     #MeuCarousel{
         display: none;
@@ -28,11 +28,11 @@
     }
 
     /* Página pesquisa-de-livros */
-    #most-liv{
+    #pesq-livro{
         width: 160px;
     }
 
-    #most-liv img{
+    #pesq-livro img{
         width: 150px;
         margin-top: 1em;
     }
@@ -41,4 +41,40 @@
         font-size: 12px;
         width: 17em;
     } 
+}
+
+@media screen and (max-width: 400px){
+    /* Página de pesquisa-de-livros */
+    #pesq-livro{
+        display: flex;
+        justify-content: center;
+        width: 120px;
+    }
+
+    #pesq-livro img{
+        width: 110px;
+        margin-top: 1em;
+    }
+
+    #inf-liv{
+        font-size: 11px;
+        width: 18em;
+    } 
+}
+@media screen and (max-width: 500px){   
+    /* Página de mostruário */
+    #most-livro img{
+        width: 160px;
+      
+    }
+
+    #most-liv-inf{
+        width: 18em;
+    }
+}
+
+@media screen and (min-width: 474px) and (max-width: 1000px){   
+    #most-liv-inf{
+        margin-left: 5em;
+    }
 }
