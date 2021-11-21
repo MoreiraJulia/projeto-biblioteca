@@ -1,7 +1,9 @@
 <?php include "../includes/cabecalho.php"; ?>
 
+<link rel="stylesheet" href="style.css">
+
 <div class="container">
-    <div class="px-3 py-5">
+    <div id="pag-login" class="px-3 py-5">
         <div class="row mt-5 text-center">
             <div class="col-md-6">
                 <h2>Faça login aqui</h2>
@@ -12,7 +14,7 @@
                     <a href="../funcionario/funcionario-login.php" class="link-light links btn btn-primary mt-3">Funcionário</a>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div id="pag-log-img" class="col-md-6">
                 <img src="../img/login-todos.png">
             </div>
         </div>

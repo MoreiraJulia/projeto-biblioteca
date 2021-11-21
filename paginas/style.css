@@ -60,20 +60,33 @@
         font-size: 11px;
         width: 18em;
     } 
+
+    /*Página login*/
+    /* #pag-login img{
+        width: 250px;
+    } */
+    #pag-log-img img{
+        width: 320px
+    }
 }
 @media screen and (max-width: 500px){   
     /* Página de mostruário */
     #most-livro img{
         width: 160px;
-      
     }
 
     #most-liv-inf{
         width: 18em;
     }
+
+    /*Página de login*/
+    #pag-log-img img{
+        width: 290px
+    }
 }
 
 @media screen and (min-width: 474px) and (max-width: 1000px){   
+    /* Página de mostruário */
     #most-liv-inf{
         margin-left: 5em;
     }
